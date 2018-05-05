@@ -1,0 +1,16 @@
+<div>
+
+    <img src="https://ui-avatars.com/api/?name={{ticket.userInfo.name}}&background=EE6E73&color=fff" alt="" class="circle">
+    <h5>{{ticket.title}} </h5>
+    <span ng-show="{{!ticket.status}}" class=" badge red white-text text-darken-4 z-depth-2">Open</span>
+    <span ng-show="{{ticket.status}}" class=" badge green white-text text-darken-4 z-depth-2">Closed</span>
+    <p class="grey-text text-darken-2" style="font-size: 0.80em"> Posted by: <span class="black-text text-darken-4">{{ticket.userInfo.name}}</span>
+    </p>
+    <p class="grey-text text-darken-2" style="font-size: 0.80em">
+        Posted on:<span class="black-text text-darken-4"> {{ticket.createdAt | date:'mediumDate'}}</span>
+    </p>
+
+
+    <a ng-href="#!/tickets/{{ticket._id}}" class="waves-effect waves-light btn btn-dark secondary-content">View</a>
+
+</div>

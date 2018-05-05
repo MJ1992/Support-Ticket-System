@@ -1,0 +1,27 @@
+<div class="col s12 m12">
+
+    <div class="card horizontal z-depth-2">
+        <div class="card-image ">
+
+            <img src="https://ui-avatars.com/api/?name={{msg.from}}&background=009688&color=fff" alt="" class="circle">
+        </div>
+        <div class="card-stacked" style="padding-top: 0px !important;">
+            <div class="card-content">
+
+                <h6 class="grey-text text-darken-2" style="font-size: 0.75em"> Posted by: <span class="black-text text-darken-4">{{msg.from}}</span>
+                </h6>
+                <h6 class="grey-text text-darken-2" style="font-size: 0.75em">
+                    <span class="grey-text text-darken-4"> {{msg.createdAt | date:"MM/dd/yyyy 'at' h:mma"}}</span>
+                </h6>
+
+                <p class="black-text text-darken-2">{{msg.message}}</p>
+
+            </div>
+            <div class="card-action">
+
+                <a ng-if="msg.isAnswer" class="btn-floating btn-small waves-effect waves-light "><i class="material-icons">check</i></a>
+                <a ng-if="!msg.isAnswer" ng-show="!ticket.status" ng-click="acceptedAnwser(msg)" class="btn-small waves-effect waves-light ">Accept Answer</i></a>
+            </div>
+        </div>
+    </div>
+</div>

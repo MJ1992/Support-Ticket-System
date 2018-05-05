@@ -1,0 +1,1 @@
+var app = angular.module('SupDesk', ['ngRoute', 'ngStorage', 'ngAnimate']);

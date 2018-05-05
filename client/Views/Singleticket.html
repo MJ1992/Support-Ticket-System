@@ -1,0 +1,50 @@
+<div class="col s12 m7">
+
+    <div class="card horizontal">
+
+        <div class="card-stacked">
+            <div class="card-content">
+                <h5>Ticket Details</h5>
+                <hr>
+                <detail-card></detail-card>
+
+                <hr>
+                <h6>Answers/Queries</h6>
+                <div class="row">
+
+
+                    <div ng-repeat='msg in msgs track by $index' class="collection-item avatar">
+                        <answer-card></answer-card>
+                    </div>
+
+
+                </div>
+            </div>
+            <div class="card-action">
+                <div class="row">
+                    <form name="Form" class="col s10">
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <i class="material-icons prefix">mode_edit</i>
+                                <textarea ng-model='message' name="message" id="QueryMessage" cols="40" rows="20" class="materialize-textarea" ng-required="true" style="width:90%;height:150px;"></textarea>
+                                <label class='active' for="QueryMessage">Reply</label>
+                            </div>
+
+                        </div>
+                    </form>
+                    <div class="valign-wrapper">
+                        <a class="waves-effect waves-light btn " href ng-disabled="Form.$invalid" ng-click="send()"> <i class="material-icons">send</i> Reply</a>
+
+                    </div>
+                    <div class="center-align">
+                        <a class="waves-effect waves-light btn" ng-if='ticket.status' ng-click="changeStatus()">Re-Open the ticket</a>
+                        <a class="waves-effect waves-light btn" ng-if='!ticket.status' ng-click="changeStatus()">Close the ticket</a>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+</div>

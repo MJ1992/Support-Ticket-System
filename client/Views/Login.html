@@ -1,0 +1,79 @@
+<div class="col s12 m7">
+    <div class="center-align">
+        <h4 class="header">Login Form</h4>
+    </div>
+
+    <div class="card horizontal">
+
+        <div class="card-stacked">
+            <div class="card-content">
+                <div class="row">
+                    <form name="Form" class="col s12">
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <i class="material-icons prefix">account_box</i>
+                                <input ng-model='LoginCtrl.data.username' id="username" name="username" type="text" ng-required='true' class="validate">
+                                <label for="username">User Name</label>
+                            </div>
+                            <div ng-show="Form.username.$touched && Form.username.$invalid ">
+                                <div class="row" id="alert_box">
+                                    <div class="col s12 m12">
+                                        <div class="card red lighten-2">
+                                            <div class="row">
+                                                <div class="col s12 m10">
+                                                    <div class="card-content white-text">
+                                                        <p>Please enter the username </p>
+
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <i class="material-icons prefix">vpn_key</i>
+                                <input ng-model='LoginCtrl.data.password' name="password" id="password" type="password" ng-required='true' class="validate">
+                                <label for="password">Password</label>
+                            </div>
+                            <div ng-show="Form.password.$touched && Form.password.$invalid ">
+                                <div class="row" id="alert_box">
+                                    <div class="col s12 m12">
+                                        <div class="card red lighten-2">
+                                            <div class="row">
+                                                <div class="col s12 m10">
+                                                    <div class="card-content white-text">
+                                                        <p>Please enter the Password </p>
+
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </form>
+
+
+                </div>
+
+            </div>
+            <div class="card-action center-align">
+                <span>Don't Have an Account? <a href="#!/signup">Register Here</a></span><br>
+                <span>Don't remember you password? <a href="#!/forgot">Click Here</a></span>
+                <br>
+                <hr>
+                <a class="waves-effect waves-light btn" href ng-click="LoginCtrl.Login(LoginCtrl.data)" ng-disabled="Form.$invalid">Login</a>
+
+            </div>
+        </div>
+    </div>
+</div>

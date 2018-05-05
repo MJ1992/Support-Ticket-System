@@ -1,0 +1,87 @@
+.main.ng-enter {
+    transition: 0.5s linear all;
+    opacity: 0;
+}
+
+.main.ng-enter.ng-enter-active {
+    opacity: 1;
+}
+
+.main card.ng-leave {
+    transition: 1s linear all;
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+.main card.ng-leave.ng-leave-active {
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+.main card.ng-leave-stagger {
+    transition-delay: 0.25s;
+    -webkit-transition-delay: 0.25s;
+    /*
+				FROM THE DOCUMENTATION:
+				In case the stagger doesn't work then these two values must be set
+				to 0 to avoid an accidental CSS inheritance.
+			*/
+    transition-duration: 0s;
+    -webkit-transition-duration: 0s;
+}
+
+.collection li.ng-enter {
+    transition: 0.75s linear all;
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+.collection li.ng-enter.ng-enter-active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.collection li.ng-enter-stagger {
+    transition-delay: 0.25s;
+    -webkit-transition-delay: 0.25s;
+    /*
+				FROM THE DOCUMENTATION:
+				In case the stagger doesn't work then these two values must be set
+				to 0 to avoid an accidental CSS inheritance.
+			*/
+    transition-duration: 0s;
+    -webkit-transition-duration: 0s;
+}
+
+div.avatar.ng-enter {
+    transition: 0.75s linear all;
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+div.avatar.ng-enter.ng-enter-active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+div.avatar.ng-enter-stagger {
+    transition-delay: 0.25s;
+    -webkit-transition-delay: 0.25s;
+    /*
+				FROM THE DOCUMENTATION:
+				In case the stagger doesn't work then these two values must be set
+				to 0 to avoid an accidental CSS inheritance.
+			*/
+    transition-duration: 0s;
+    -webkit-transition-duration: 0s;
+}
+
+input[disabled='disabled'],
+a[disabled="disabled"] {
+    opacity: 0.75;
+    cursor: not-allowed;
+}
+
+a.btn-small {
+    margin-bottom: 5px;
+}

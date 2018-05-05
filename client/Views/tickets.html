@@ -1,0 +1,29 @@
+<div class="row">
+    <div class="col s12 m12 ml-auto mr-auto">
+        <div class="card-panel white">
+
+            <div class="row" style="margin-top: 15px;">
+
+                <label>Status</label>
+                <br>
+
+                <select name="status" ng-model="status">
+                     <option value="">All</option>
+                    <option value="false">Open</option>
+                    <option value="true">Closed</option>
+                    </select>
+
+                <div id="all1" class="col s12 ">
+                    <ul class="collection m12" style="border: 0px;">
+                        <li ng-repeat="ticket in ticketsCtrl.tickets | filter:status " ng-href="#!/tickets/{{ticket._id}}" class="collection-item avatar hoverable" style="margin-top: 15px; margin-bottom: 15px;">
+                            <ticket-card></ticket-card>
+                        </li>
+
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
