@@ -32,11 +32,13 @@ Client folder contains the frontend part of the application(AngularJS ,HTML,CSS)
 
 Back end server of the app will be started at port 4000
 
+#### Assumption
+Admin account to be created first with valid email id and that ID to be stored in server/libs/config.js file into admin property of module.exports object to receive the mails about any reply or answer on ticket
 
 ### How to use the App
 
 1. Go to Client app home page.Click on Signup on navigation bar
-2. Sign up as admin( need to check the checkbox to sign up as admin
+2. Sign up as admin( need to check the checkbox to sign up as admin)
 3. Email id used for admin user should be added(to recieve the emails in server/libs/config.js file into the admin property.
 or you can add any email id where you want to recieve the emails as admin.
 4. After this  sign up as normal user (dont check the checkbox on signup page.You will be redirected to home page.
