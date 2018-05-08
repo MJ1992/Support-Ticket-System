@@ -22,7 +22,7 @@ Client folder contains the frontend part of the application(AngularJS ,HTML,CSS)
 ### Client app
 * Go to Client folder directory
 * run npm install
-* run application on local host using live server in VS code
+* run application on local host (using live server in VS code or any http server)(I have used VS code live server extension)
 
 ### Server app
 * Go to server folder
@@ -56,5 +56,6 @@ or you can add any email id where you want to recieve the emails as admin.
 3. Used Materialize toast to give user alert messages.
 4. AngularJs client side form validation
 5. used NgAnimate for smooth and beautiful transition between routes and also in ngRepeat items   
+6. Edit ticket functionality (usr can only edit ticket title and ticket details.Name, email and Mobile No. provided by user are fixed.
 
 
